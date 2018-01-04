@@ -26,7 +26,7 @@ declare function mi:countallperson() as xs:integer{
 
 (: Cette fonction renvoi tous les ids de centre de recherche :)
 declare function mi:recuppererIDDeCentreDeRecherche()as node()*{
-    let $res := for $x in doc("/db/raweb/bastriCris.xml")/crs/cr/@siid
+    let $res := for $x in doc("http://localhost:8082/inriaprojxml/bastriCris.xml")/crs/cr/@siid
         return <cr>{$x}</cr>
     return <crs>{$res}</crs>
     
@@ -35,7 +35,7 @@ declare function mi:recuppererIDDeCentreDeRecherche()as node()*{
 
 (: Cette fonction renvoi tous les NOMS,  VILLE, DATEOUVERTURE, DATEFERMETURE:)
 declare function mi:recuppererDetailsCentreDeRecherche()as node()*{
-    let $res := for $cr in doc("/db/raweb/bastriCris.xml")/crs/cr
+    let $res := for $cr in doc("http://localhost:8082/inriaprojxml/bastriCris.xml")/crs/cr
         return <cr>{$cr/@siid}<nom>{$cr/libelle}</nom><ville>{$cr/adressegeographique/ville}</ville>
             <do>{$cr/date_ouverture}</do><df>{$cr/date_fermeture}</df>
         </cr>
