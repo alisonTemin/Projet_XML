@@ -20,12 +20,9 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-<<<<<<< HEAD
-    <a class="navbar-brand" href="#">Raweb Inri</a>
-=======
-    <a class="navbar-brand" href="#">Raweb Inria</a>
->>>>>>> a606a3b3664a21540bbf1572694de542769d1088
 
+    <a class="navbar-brand" href="#">Raweb Inria</a>
+    
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
@@ -116,7 +113,8 @@
   
   function remplirTableCentreDeRecherche(){
     //Appel ajax
-    fetch("http://localhost:8082/inriaprojxml/rest/centrederecherche/details/").then(function (reponse) {
+      http://localhost:2222/centrederecherche/details
+    fetch("http://localhost:2222/centrederecherche/details").then(function (reponse) {
         return reponse.text();
     }).then(function(text){
       console.log(text);

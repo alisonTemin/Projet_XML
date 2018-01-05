@@ -4,6 +4,7 @@ package fr.unice.miage.m1.alichamlausam;
 import javax.ws.rs.GET;
 import javax.ws.rs.Produces;
 import javax.ws.rs.Path;
+import javax.ws.rs.core.MediaType;
 
 
 /**
@@ -14,6 +15,7 @@ public class PersonneService{
 
 	@GET
 	@Path("/alichamlausam")
+    @Produces({MediaType.TEXT_PLAIN})
 	public String getClichedMessage() {
         // Return some cliched textual content
         return "Hello World";
