@@ -37,11 +37,11 @@
        </dependency>
 
    <!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
-      <!--<dependency>
+      <dependency>
           <groupId>javax.ws.rs</groupId>
           <artifactId>javax.ws.rs-api</artifactId>
           <version>2.1</version>
-      </dependency>-->
+      </dependency>
 
 
    <!-- https://mvnrepository.com/artifact/org.xmldb/xmldb-api -->
@@ -97,7 +97,7 @@
           <groupId>javax.servlet</groupId>
           <artifactId>javax.servlet-api</artifactId>
           <version>3.1.0</version>
-          <!-- <scope>provided</scope> -->
+          <scope>provided</scope>
       </dependency>
 
 
@@ -126,34 +126,44 @@
           <version>6.1.25</version>
       </dependency>-->
 
-
-
       <dependency>
           <groupId>org.eclipse.jetty</groupId>
           <artifactId>jetty-server</artifactId>
           <version>9.2.3.v20140905</version>
+          <scope>provided</scope>
       </dependency>
       <dependency>
           <groupId>org.eclipse.jetty</groupId>
           <artifactId>jetty-servlet</artifactId>
           <version>9.2.3.v20140905</version>
+          <scope>provided</scope>
+
       </dependency>
       <dependency>
           <groupId>org.glassfish.jersey.core</groupId>
           <artifactId>jersey-server</artifactId>
           <version>2.7</version>
+          <scope>provided</scope>
+
       </dependency>
       <dependency>
           <groupId>org.glassfish.jersey.containers</groupId>
           <artifactId>jersey-container-servlet-core</artifactId>
           <version>2.7</version>
+          <scope>provided</scope>
+
       </dependency>
       <dependency>
           <groupId>org.glassfish.jersey.containers</groupId>
           <artifactId>jersey-container-jetty-http</artifactId>
           <version>2.7</version>
+          <scope>provided</scope>
+
       </dependency>
 
+
+
+      
 
   </dependencies>
   <build>
@@ -256,7 +266,6 @@
             </executions>
             <configuration>
 
-                <mainClass>fr.unice.miage.m1.alichamlausam.CustomServer</mainClass>
             </configuration>
         </plugin>
 
@@ -285,6 +294,54 @@
         </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <id>jetty</id>
+      <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>9.2.3.v20140905</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlet</artifactId>
+            <version>9.2.3.v20140905</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>2.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet-core</artifactId>
+            <version>2.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-jetty-http</artifactId>
+            <version>2.7</version>
+        </dependency>
+      </dependencies>
+      <properties>
+        <exec.mainClass>fr.unice.miage.m1.alichamlausam.CustomServer</exec.mainClass>
+      </properties>
+    </profile>
+    <profile>
+      <id>glassfish</id>
+      <properties>
+        <exec.mainClass>fr.unice.miage.m1.alichamlausam.XQueryUtil</exec.mainClass>
+      </properties>
+    </profile>
+  </profiles>
+
   
   <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -295,6 +352,8 @@
             <url>https://raw.github.com/eXist-db/mvn-repo/master/</url>
       </repository>
   </repositories>
+
+
 </project>
 
 <!--

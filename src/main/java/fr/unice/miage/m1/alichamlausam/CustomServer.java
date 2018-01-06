@@ -16,7 +16,7 @@ public class CustomServer {
 
 
         Server server = new Server(2222);
-        ServletContextHandler context = new ServletContextHandler(server, "/*");
+        ServletContextHandler context = new ServletContextHandler(server, "/rest/*");
         context.addServlet(servlet, "/*");
 
 //        ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
