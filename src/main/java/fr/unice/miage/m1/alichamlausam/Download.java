@@ -57,9 +57,13 @@ public class Download
 
     public static void main(String[] args)
     {
-        String link = new String("http://www-sop.inria.fr/members/Philippe.Poulard/projet/2017/bastri.xml");
-        getFile(link);
-        System.out.println("File download");
+        String linkBastri = new String("http://www-sop.inria.fr/members/Philippe.Poulard/projet/2017/bastri.xml");
+        getFile(linkBastri);
+        System.out.println("File bastri.xml download");
+        String linkBastriCris = new String("http://www-sop.inria.fr/members/Philippe.Poulard/projet/2017/bastriCris.xml");
+        getFile(linkBastriCris);
+        System.out.println("File bastriCris.xml download");
+
 //        if (args.length != 1)
 //        {
 //            System.out.println("You must give the URL of the file to download.");
