@@ -1,7 +1,7 @@
 body {
   padding-top: 5rem;
 }
-
+/* Optional: Makes the sample page fill the window. */
 html, body {
   height: 100%;
   margin: 0;
@@ -17,10 +17,14 @@ html, body {
 }
 
 .main-container {
-  padding: 3rem 1.5rem;
+  padding: 1.5rem 1.5rem;
   text-align: center;
 }
 
 .left {
   text-align: left;
 }
+/*
+@media screen and (max-width: 991px) {
+}
+*/

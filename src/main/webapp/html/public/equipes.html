@@ -11,7 +11,8 @@
   <!-- CSS files -->
   <link rel="stylesheet" href="../library/bootstrap-4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../library/bootstrap-table/src/bootstrap-table.css">
-  <link rel="stylesheet" href="./css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../library/webix/webix.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 
 </head>
 <body>
@@ -79,17 +80,6 @@
               <td></td>
               <td></td>
             </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -104,33 +94,9 @@
   <script type="text/javascript" src="../library/bootstrap-4.0.0/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../library/bootstrap-table/src/bootstrap-table.js"></script>
   <script type="text/javascript" src="../library/bootstrap-table/src/locale/bootstrap-table-fr-FR.js"></script>
-
-  <script>
-  function initMapTeams() {
-    var centreLat = 46.8;
-    var centreLng = 5;
-    var latlng = new google.maps.LatLng(centreLat, centreLng);
-    var zoomMap = 6;
-    var options = {
-      zoom: zoomMap,
-      center: latlng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-
-    var teamsMap = new google.maps.Map(document.getElementById("teamsMap"), options);
-
-    var marqueur = new google.maps.Marker({
-      position: new google.maps.LatLng(43.696, 7.289429),
-      map: teamsMap,
-      title: "Nice"
-    });
-    var marqueur1 = new google.maps.Marker({
-      position: new google.maps.LatLng(48.854733, 2.350879),
-      map: teamsMap,
-      title: "Paris"
-    });
-  }
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWVVmEYiKBHdXFOYh_6iDMWoHQ02lHGpw&callback=initMapTeams"></script>
+  <script type="text/javascript" src="../library/webix/webix.js"></script>
+  <script type="text/javascript" src="./js/mapTeams.js"></script>
+  <script type="text/javascript" src="./js/tableResearchCenters.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWVVmEYiKBHdXFOYh_6iDMWoHQ02lHGpw&callback=initMapTeams"></script>
 </body>
 </html>
