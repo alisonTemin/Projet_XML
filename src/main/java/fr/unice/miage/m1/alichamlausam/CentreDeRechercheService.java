@@ -5,9 +5,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 
-/**
-* @author Chamir
-*/
+
 @Path("/centrederecherche") //path de la classe 
 public class CentreDeRechercheService {
 
@@ -24,6 +22,14 @@ public class CentreDeRechercheService {
 	@Produces({MediaType.TEXT_PLAIN})
 	public String getDetailsCentreDeRecherche(){
 		return XQueryUtil.execXQuery("mi:recuppererDetailsCentreDeRecherche()");
+	}
+
+
+	@GET
+	@Produces({MediaType.TEXT_PLAIN})
+	public void getStructureInria(){
+		JaxbBastri jaxb = new JaxbBastri();
+		jaxb.jaxBOnBastri();
 	}
 
 }
