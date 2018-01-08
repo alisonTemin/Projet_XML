@@ -1,14 +1,18 @@
 package fr.unice.miage.m1.alichamlausam;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Download
 {
-    public static boolean getFile(String host)
+    public static void getFile(String host)
     {
         InputStream input = null;
         FileOutputStream writeFile = null;
@@ -52,24 +56,42 @@ public class Download
                 e.printStackTrace();
             }
         }
-        return true;
+
     }
 
-    public static void main(String[] args)
-    {
+  
+    public static void main(String[] args) throws ParseException {
+
         String linkBastri = new String("http://www-sop.inria.fr/members/Philippe.Poulard/projet/2017/bastri.xml");
+
         getFile(linkBastri);
-        System.out.println("File bastri.xml download");
+
+        File fileBastri = new File("bastri.xml");
+        Long lastModifiedBastri = fileBastri.lastModified();
+        Date dateBastri = new Date(lastModifiedBastri);
+        System.out.println("File bastri.xml download on : " + dateBastri);
+
         String linkBastriCris = new String("http://www-sop.inria.fr/members/Philippe.Poulard/projet/2017/bastriCris.xml");
         getFile(linkBastriCris);
-        System.out.println("File bastriCris.xml download");
 
-//        if (args.length != 1)
-//        {
-//            System.out.println("You must give the URL of the file to download.");
-//            return;
-//        }
-//
-//        getFile(args[0]);
+        File fileBastriCris = new File("bastri.xml");
+        Long lastModifiedBastriCris = fileBastriCris.lastModified();
+        Date dateBastriCris = new Date(lastModifiedBastriCris);
+        System.out.println("File bastriCris.xml download on : " + dateBastriCris);
+
+        SimpleDateFormat dateFormatter = new SimpleDateFormat("dd-MM-yyyy");
+        Date todayDate = dateFormatter.parse(dateFormatter.format(new Date()));
+
+        if(dateBastri.compareTo(todayDate) == -1){
+            getFile(linkBastri);
+            System.out.println("File bastri.xml new download on : " + dateBastri);
+            getFile(linkBastriCris);
+            System.out.println("File bastriCris.xml new download on : " + dateBastriCris);
+        }
+
+
     }
-}
+
+    }
+
+  
