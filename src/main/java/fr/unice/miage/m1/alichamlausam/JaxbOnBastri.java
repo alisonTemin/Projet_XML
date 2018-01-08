@@ -7,30 +7,28 @@ import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.util.List;
 
-public class Jaxb {
-    public static void main(String[] args) {
-
+public class JaxbOnBastri {
+    public void JaxBOnBastriFile() {
 
         try {
             ObjectFactory objectFactory = new ObjectFactory();
-            JAXBContext jc = JAXBContext.newInstance("fr.unice.miage.m1.alichamlausam");
+            JAXBContext jc = JAXBContext.newInstance("org.inria.fr.ns.sr");
 
             Unmarshaller unmarshaller = jc.createUnmarshaller();
 
-            CentreDeRechercheService centreRecherche = (CentreDeRechercheService) unmarshaller.unmarshal(new File("jaxb.xml"));
+            org.inria.fr.ns.sr.StructureInrias structureInrias = (org.inria.fr.ns.sr.StructureInrias) unmarshaller.unmarshal(new File("bastri.xml"));
 
 
 
-            String details = centreRecherche.getDetailsCentreDeRecherche();
-            String id = centreRecherche.getIdCentreDeRecherche();
+            List<?> details = structureInrias.getStructureinria();
 
 
 
-                System.out.println("Centres de recherches ");
+
+                System.out.println("Structure Inria :  ");
 
                 System.out.println("Détails   : " +  details);
 
-                System.out.println("ID  : " + id);
 
                 System.out.println();
 

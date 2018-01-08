@@ -28,8 +28,8 @@ public class CentreDeRechercheService {
 	@GET
 	@Produces({MediaType.TEXT_PLAIN})
 	public void getStructureInria(){
-		JaxbBastri jaxb = new JaxbBastri();
-		jaxb.jaxBOnBastri();
+		JaxbOnBastri jaxb = new JaxbOnBastri();
+		jaxb.JaxBOnBastriFile();
 	}
 
 }

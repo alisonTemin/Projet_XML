@@ -89,7 +89,6 @@ public class Download
             System.out.println("File bastriCris.xml new download on : " + dateBastriCris);
         }
 
-
     }
 
     }
