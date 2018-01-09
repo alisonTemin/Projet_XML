@@ -1,0 +1,15 @@
+figcaption {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#projectsDiv {
+  width: 100%;
+  height: 390px;
+  padding-left: 8px;
+}
+
+#themesSvg {
+   padding-top: 100px;
+   padding-left: 120px;
+}
