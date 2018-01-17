@@ -13,107 +13,167 @@ $(function () {
     0: {
       centre: "Bordeaux",
       themes: [
-        ['Mushrooms', 3],
-        ['Onions', 1],
-        ['Olives', 1],
-        ['Zucchini', 1],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2],
-        ['Pepapig', 2]
+        ['Algorithmics, Computer Algebra and Cryptology', 1],
+        ['Computational Biology', 1],
+        ['Computational Neuroscience and Medecine', 2],
+        ['Distributed and High Performance Computing', 3],
+        ['Distributed programming and Software engineering', 1],
+        ['Earth, Environmental and Energy Sciences', 1],
+        ['Embedded and Real-time Systems', 1],
+        ['Interaction and visualization', 2],
+        ['Modeling and Control for Life Sciences', 2],
+        ['Numerical schemes and simulations', 3],
+        ['Optimization, machine learning and statistical methods', 2],
+        ['Robotics and Smart environments', 1],
+        ['Stochastic approaches', 1]
       ]
     },
+
     1: {
       centre: "Grenoble",
       themes: [
-        ['Mushrooms', 3],
-        ['Onions', 1],
-        ['Olives', 1],
-        ['Zucchini', 1],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2],
-        ['Pepapa', 2]
+        ['Algorithmics, Computer Algebra and Cryptology', 1],
+        ['Architecture, Languages and Compilation', 2],
+        ['Computational Biology', 3],
+        ['Data and Knowledge Representation and Processing', 2],
+        ['Distributed Systems and middleware', 1],
+        ['Distributed and High Performance Computing', 4],
+        ['Earth, Environmental and Energy Sciences', 2],
+        ['Embedded and Real-time Systems', 2],
+        ['Interaction and visualization', 2],
+        ['Modeling and Control for Life Sciences', 2],
+        ['Networks and Telecommunications', 3],
+        ['Numerical schemes and simulations', 1],
+        ['Optimization and control of dynamic systems', 2],
+        ['Optimization, machine learning and statistical methods', 1],
+        ['Robotics and Smart environments', 2],
+        ['Security and Confidentiality', 2],
+        ['Vision, perception and multimedia interpretation', 3]
       ]
     },
     2: {
       centre: "Lille",
       themes: [
-        ['Mushrooms', 3],
-        ['Onions', 1],
-        ['Olives', 1],
-        ['Zucchini', 1],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2],
-        ['Pepapi', 2]
+        ['Architecture, Languages and Compilation', 1],
+        ['Computational Biology', 1],
+        ['Data and Knowledge Representation and Processing', 2],
+        ['Distributed Systems and middleware', 1],
+        ['Distributed programming and Software engineering', 1],
+        ['Interaction and visualization', 2],
+        ['Networks and Telecommunications', 1],
+        ['Numerical schemes and simulations', 2],
+        ['Optimization and control of dynamic systems', 1],
+        ['Optimization, machine learning and statistical methods', 4],
+        ['Robotics and Smart environments', 1]
       ]
     },
     3: {
       centre: "Nancy",
       themes: [
-        ['Mushrooms', 3],
-        ['Onions', 1],
-        ['Olives', 1],
-        ['Zucchini', 1],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2],
-        ['Pepapo', 2]
+        ['Algorithmics, Computer Algebra and Cryptology', 2],
+        ['Architecture, Languages and Compilation', 1],
+        ['Computational Biology', 2],
+        ['Computational Neuroscience and Medecine', 2],
+        ['Data and Knowledge Representation and Processing', 1],
+        ['Distributed Systems and middleware', 1],
+        ['Earth, Environmental and Energy Sciences', 1],
+        ['Interaction and visualization', 1],
+        ['Language, Speech and Audio', 2],
+        ['Networks and Telecommunications', 1],
+        ['Optimization and control of dynamic systems', 1],
+        ['Proofs and Verification', 1],
+        ['Robotics and Smart environments', 1],
+        ['Security and Confidentiality', 2],
+        ['Stochastic approaches', 1],
+        ['Vision, perception and multimedia interpretation', 1]
       ]
     },
     4: {
       centre: "Paris",
       themes: [
-        ['Mushrooms', 3],
-        ['Onions', 1],
-        ['Olives', 1],
-        ['Zucchini', 1],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2],
-        ['Pepepe', 2]
+        ['Algorithmics, Computer Algebra and Cryptology', 3],
+        ['Computational Biology', 1],
+        ['Computational Neuroscience and Medecine', 1],
+        ['Distributed Systems and middleware', 3],
+        ['Distributed and High Performance Computing', 1],
+        ['Earth, Environmental and Energy Sciences', 3],
+        ['Embedded and Real-time Systems', 3],
+        ['Language, Speech and Audio', 1],
+        ['Modeling and Control for Life Sciences', 3],
+        ['Networks and Telecommunications', 5],
+        ['Numerical schemes and simulations', 2],
+        ['Optimization and control of dynamic systems', 1],
+        ['Optimization, machine learning and statistical methods', 1],
+        ['Proofs and Verification', 3],
+        ['Robotics and Smart environments', 1],
+        ['Security and Confidentiality', 1],
+        ['Stochastic approaches', 1],
+        ['Vision, perception and multimedia interpretation', 1]
       ]
     },
     5: {
       centre: "Rennes",
       themes: [
-        ['Mushrooms', 3],
-        ['Onions', 1],
-        ['Olives', 1],
-        ['Zucchini', 1],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2],
-        ['Pepepa', 2]
+        ['Architecture, Languages and Compilation', 3],
+        ['Computational Biology', 3],
+        ['Computational Neuroscience and Medecine', 1],
+        ['Data and Knowledge Representation and Processing', 1],
+        ['Distributed Systems and middleware', 3],
+        ['Distributed and High Performance Computing', 1],
+        ['Distributed programming and Software engineering', 3],
+        ['Earth, Environmental and Energy Sciences', 1],
+        ['Embedded and Real-time Systems', 2],
+        ['Interaction and visualization', 2],
+        ['Language, Speech and Audio', 1],
+        ['Networks and Telecommunications', 1],
+        ['Numerical schemes and simulations', 1],
+        ['Optimization and control of dynamic systems', 1],
+        ['Optimization, machine learning and statistical methods', 1],
+        ['Proofs and Verification', 2],
+        ['Robotics and Smart environments', 1],
+        ['Security and Confidentiality', 1],
+        ['Stochastic approaches', 1],
+        ['Vision, perception and multimedia interpretation', 2]
       ]
     },
     6: {
       centre: "Saclay",
       themes: [
-        ['Mushrooms', 3],
-        ['Onions', 1],
-        ['Olives', 1],
-        ['Zucchini', 1],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2],
-        ['Pepapi', 2]
+        ['Algorithmics, Computer Algebra and Cryptology', 3],
+        ['Computational Biology', 2],
+        ['Computational Neuroscience and Medecine', 3],
+        ['Data and Knowledge Representation and Processing', 3],
+        ['Interaction and visualization', 3],
+        ['Modeling and Control for Life Sciences', 1],
+        ['Networks and Telecommunications', 1],
+        ['Numerical schemes and simulations', 3],
+        ['Optimization and control of dynamic systems', 4],
+        ['Optimization, machine learning and statistical methods', 2],
+        ['Proofs and Verification', 4],
+        ['Security and Confidentiality', 1]
       ]
     },
     7: {
       centre: "Sophia",
       themes: [
-        ['Mushrooms', 3],
-        ['Onions', 1],
-        ['Olives', 1],
-        ['Zucchini', 1],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2],
-        ['Pepperoni', 2]
+        ['Algorithmics, Computer Algebra and Cryptology', 2],
+        ['Computational Biology', 3],
+        ['Computational Neuroscience and Medecine', 5],
+        ['Data and Knowledge Representation and Processing', 3],
+        ['Distributed programming and Software engineering', 2],
+        ['Earth, Environmental and Energy Sciences', 3],
+        ['Embedded and Real-time Systems', 1],
+        ['Interaction and visualization', 2],
+        ['Modeling and Control for Life Sciences', 1],
+        ['Networks and Telecommunications', 3],
+        ['Numerical schemes and simulations', 3],
+        ['Optimization and control of dynamic systems', 2],
+        ['Proofs and Verification', 1],
+        ['Robotics and Smart environments', 2],
+        ['Stochastic approaches', 1],
+        ['Vision, perception and multimedia interpretation', 2]
       ]
-    }
+    }  
   };
 
   // create a button for each centre

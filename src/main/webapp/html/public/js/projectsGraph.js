@@ -4,7 +4,7 @@
 $(function () {
   var listeThemes = {
     0: {
-      theme: "ACFC", // Algorithmique, calcul formel et cryptologie
+      theme: "ACAC", // Algorithmics, Computer Algebra and Cryptology
       projets: [
         {text : "ARIC"},
         {text : "AROMATH"},
@@ -20,7 +20,7 @@ $(function () {
       ]
     },
     1: {
-      theme: "ALC", // Architecture, langages et compilation
+      theme: "ALC", // Architecture, Languages and Compilation
       projets: [
         {text : "CAIRN"},
         {text : "CAMUS"},
@@ -32,7 +32,7 @@ $(function () {
       ]
     },
     2: {
-      theme: "BN", // Biologie numérique
+      theme: "CB", // Computational Biology
       projets: [
         {text : "ABS"},
         {text : "AMIB"},
@@ -53,7 +53,7 @@ $(function () {
       ]
     },
     3: {
-      theme: "NMN", // Neurosciences et médecine numériques
+      theme: "CNM", // Computational Neuroscience and Medecine
       projets: [
         {text : "ARAMIS"},
         {text : "ASCLEPIOS"},
@@ -72,7 +72,7 @@ $(function () {
       ]
     },
     4: {
-      theme: "RTDC", // Représentation et traitement des données et des connaissances
+      theme: "DKRP", // Data and Knowledge Representation and Processing
       projets: [
         {text : "CEDAR"},
         {text : "DAHU"},
@@ -89,7 +89,7 @@ $(function () {
       ]
     },
     5: {
-      theme: "SDI", // SD et intergiciels
+      theme: "DSM", // Distributed Systems and middleware
       projets: [
         {text : "ASAP"},
         {text : "CIDRE"},
@@ -103,7 +103,7 @@ $(function () {
       ]
     },
     6: {
-      theme: "CDHP", // CD et à haute performance
+      theme: "DHPC", // Distributed and High Performance Computing
       projets: [
         {text : "ALPINES"},
         {text : "AVALON"},
@@ -117,7 +117,7 @@ $(function () {
       ]
     },
     7: {
-      theme: "PDGL", // Programmation distribuée et génie logiciel
+      theme: "DPSE", // Distributed programming and Software engineering
       projets:[
         {text : "ASCOLA"},
         {text : "DIVERSE"},
@@ -129,7 +129,7 @@ $(function () {
       ]
     },
     8: {
-      theme: "SPEE", // Sciences de la planète, de l'environnement et de l'énergie
+      theme: "EEES", // Earth, Environmental and Energy Sciences
       projets:[
         {text : "AIRSEA"},
         {text : "ANGE"},
@@ -145,7 +145,7 @@ $(function () {
       ]
     },
     9: {
-      theme: "SETR", // Systèmes embarqués et temps réel
+      theme: "ERTS", // Embedded and Real-time Systems
       projets:[
         {text : "AOSTE"},
         {text : "CONVECS"},
@@ -158,7 +158,7 @@ $(function () {
       ]
     },
     10: {
-      theme: "IV", // Interaction et visualisation
+      theme: "IV", // Interaction and visualization
       projets:[
         {text : "ALICE"},
         {text : "AVIZ"},
@@ -176,7 +176,7 @@ $(function () {
       ]
     },
     11: {
-      theme: "LPA", // Langue, parole et audio
+      theme: "LSA", // Language, Speech and Audio
       projets:[
         {text : "ALPAGE"},
         {text : "MULTISPEECH"},
@@ -185,7 +185,7 @@ $(function () {
       ]
     },
     12: {
-      theme: "MCV", // Modélisation et commande pour le vivant
+      theme: "MCLS", // Modeling and Control for Life Sciences
       projets:[
         {text : "BIOCORE"},
         {text : "CARMEN"},
@@ -199,7 +199,7 @@ $(function () {
       ]
     },
     13: {
-      theme: "R&T",
+      theme: "N&T",
       projets:[
         {text : "COATI"},
         {text : "DANTE"},
@@ -218,7 +218,7 @@ $(function () {
       ]
     },
     14: {
-      theme: "SSN", // Schémas et simulations numériques
+      theme: "NSS", // Numerical schemes and simulations
       projets:[
         {text : "ACUMES"},
         {text : "CAGIRE"},
@@ -238,7 +238,7 @@ $(function () {
       ]
     },
     15: {
-      theme: "OCSD", // Optimisation et contrôle de systèmes dynamiques
+      theme: "OCDS", // Optimization and control of dynamic systems
       projets:[
         {text : "APICS"},
         {text : "BIPOP"},
@@ -255,7 +255,7 @@ $(function () {
       ]
     },
     16: {
-      theme: "OAMS", // Optimisation, apprentissage et méthodes statistiques
+      theme: "OMLSM", // Optimization, machine learning and statistical methods
       projets:[
         {text : "ANJA"},
         {text : "DOLPHIN"},
@@ -271,7 +271,7 @@ $(function () {
       ]
     },
     17: {
-      theme: "PV", // Preuves et vérification
+      theme: "PV", // Proofs and Verification
       projets:[
         {text : "ANTIQUE"},
         {text : "CELTIQUE"},
@@ -287,7 +287,7 @@ $(function () {
       ]
     },
     18: {
-      theme: "REI", // Robotique et environnements intelligents
+      theme: "RSE", // Robotics and Smart environments
       projets:[
         {text : "CHROMA"},
         {text : "DEFROST"},
@@ -300,7 +300,7 @@ $(function () {
       ]
     },
     19: {
-      theme: "SC", // Sécurité et confidentialité
+      theme: "SC", // Security and Confidentiality
       projets:[
         {text : "CARTE"},
         {text : "COMETE"},
@@ -312,7 +312,7 @@ $(function () {
       ]
     },
     20: {
-      theme: "AS", // Approches stochastiques
+      theme: "SA", // Stochastic approaches
       projets:[
         {text : "ASPI"},
         {text : "CQFD"},
@@ -321,7 +321,7 @@ $(function () {
       ]
     },
     21: {
-      theme: "VPIM", // Vision, perception et interprétation multimédia
+      theme: "VPMI", // Vision, perception and multimedia interpretation
       projets:[
         {text : "AYIN"},
         {text : "LINKMEDIA"},
