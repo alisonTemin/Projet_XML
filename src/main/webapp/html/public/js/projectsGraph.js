@@ -374,8 +374,6 @@ $(function () {
     var oText =  createSvgTag("text",{x:center.X,y:center.Y+8,"font-size":"18",'text-anchor':'middle'});
     oG.appendChild(oCircle);
     oG.appendChild(oText);
-
-    // Object.keys(listeThemes)[0]
     oText.innerHTML = listeThemes[numCentralNode]['theme'];
     textCentralNode = oText;
     oSvg.appendChild(oG);

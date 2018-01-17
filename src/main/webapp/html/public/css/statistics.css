@@ -9,7 +9,14 @@ figcaption {
   padding-left: 8px;
 }
 
-#themesSvg {
-   padding-top: 100px;
-   padding-left: 120px;
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  #columnChartDiv {
+    padding-left: 80px;
+  }
 }
+/*
+#themesSvg {
+padding-top: 100px;
+}
+*/

@@ -1,39 +1,128 @@
 // https://hackernoon.com/a-simple-pie-chart-in-svg-dbdd653b6936
-// https://codepen.io/shshaw/pen/KpyNQq
-// https://codepen.io/team/css-tricks/pen/77040610b66e6aa0d0fb87022c524194
 // https://www.smashingmagazine.com/2015/07/designing-simple-pie-charts-with-css/
+
+// https://developers.google.com/chart/interactive/docs/gallery/piechart
 
 // Function for themes graph (pie chart)
 $(function () {
-  var total = 158,
-  buttons = document.querySelector('#themesButtons'),
-  pie = document.querySelector('.pie'),
-  activeClass = 'active';
+  var buttons = document.querySelector('#themesButtons'),
+  activeClass = 'active',
+  centerNumber = 0;
 
-  var centres = {
-    CR0001I: 10,
-    CR0002O : 10,
-    CR0003O: 0,
-    CR0004Z: 0,
-    CR0005N: 0,
-    CR0006Z: 0,
-    CR0007B: 0,
-    CR0008I:0
+  var listeCentres = {
+    0: {
+      centre: "Bordeaux",
+      themes: [
+        ['Mushrooms', 3],
+        ['Onions', 1],
+        ['Olives', 1],
+        ['Zucchini', 1],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2],
+        ['Pepapig', 2]
+      ]
+    },
+    1: {
+      centre: "Grenoble",
+      themes: [
+        ['Mushrooms', 3],
+        ['Onions', 1],
+        ['Olives', 1],
+        ['Zucchini', 1],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2],
+        ['Pepapa', 2]
+      ]
+    },
+    2: {
+      centre: "Lille",
+      themes: [
+        ['Mushrooms', 3],
+        ['Onions', 1],
+        ['Olives', 1],
+        ['Zucchini', 1],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2],
+        ['Pepapi', 2]
+      ]
+    },
+    3: {
+      centre: "Nancy",
+      themes: [
+        ['Mushrooms', 3],
+        ['Onions', 1],
+        ['Olives', 1],
+        ['Zucchini', 1],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2],
+        ['Pepapo', 2]
+      ]
+    },
+    4: {
+      centre: "Paris",
+      themes: [
+        ['Mushrooms', 3],
+        ['Onions', 1],
+        ['Olives', 1],
+        ['Zucchini', 1],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2],
+        ['Pepepe', 2]
+      ]
+    },
+    5: {
+      centre: "Rennes",
+      themes: [
+        ['Mushrooms', 3],
+        ['Onions', 1],
+        ['Olives', 1],
+        ['Zucchini', 1],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2],
+        ['Pepepa', 2]
+      ]
+    },
+    6: {
+      centre: "Saclay",
+      themes: [
+        ['Mushrooms', 3],
+        ['Onions', 1],
+        ['Olives', 1],
+        ['Zucchini', 1],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2],
+        ['Pepapi', 2]
+      ]
+    },
+    7: {
+      centre: "Sophia",
+      themes: [
+        ['Mushrooms', 3],
+        ['Onions', 1],
+        ['Olives', 1],
+        ['Zucchini', 1],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2],
+        ['Pepperoni', 2]
+      ]
+    }
   };
 
-  // work out percentage as a result of total
-  var numberFixer = function(num){
-    var result = ((num * total) / 100);
-    return result;
-  }
-
   // create a button for each centre
-  for(property in centres) {
+  for(property in listeCentres) {
     var newEl = document.createElement('button');
-    newEl.innerText = property;
+    newEl.innerText = listeCentres[property]['centre'];
     newEl.className ="list-group-item list-group-item-action list-group-item-primary btn-sm";
     newEl.setAttribute('type', "button");
-    newEl.setAttribute('data-name', property);
+    newEl.setAttribute('data-name', listeCentres[property]['centre']);
     buttons.appendChild(newEl);
   }
 
@@ -42,18 +131,12 @@ $(function () {
     if(e.target != e.currentTarget){
       var el = e.target,
       name = el.getAttribute('data-name');
-      setPieChart(name);
       setActiveClass(el);
+      setCenterNumber(name);
+      resetGraph();
     }
     e.stopPropagation();
   });
-
-  var setPieChart = function(name){
-    var number = centres[name],
-    fixedNumber = numberFixer(number),
-    result = fixedNumber + ' ' + total;
-    pie.style.strokeDasharray = result;
-  }
 
   var setActiveClass = function(el) {
     for(var i = 0; i < buttons.children.length; i++) {
@@ -62,7 +145,46 @@ $(function () {
     }
   }
 
+  var setCenterNumber = function(el) {
+    for(property in listeCentres) {
+      if(listeCentres[property]['centre'] === el) {
+        centerNumber = property;
+      }
+    }
+  }
+
+  var resetGraph = function() {
+    var element = document.getElementById("pieChartDiv");
+    element.removeChild(element.firstChild);
+
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+  }
+
+  function drawChart() {
+
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Topping');
+    data.addColumn('number', 'Slices');
+
+    data.addRows(listeCentres[centerNumber]['themes']);
+
+    // Set chart options
+    var options = {
+      'width':500,
+      'height':400
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('pieChartDiv'));
+    chart.draw(data, options);
+  }
+
+  // Load the Visualization API and the corechart package.
+  google.charts.load('current', {'packages':['corechart']});
+
+  // Set a callback to run when the Google Visualization API is loaded.
+  google.charts.setOnLoadCallback(drawChart);
+
   // Set up default settings
-  setPieChart('CR0001I');
   setActiveClass(buttons.children[0]);
 });
