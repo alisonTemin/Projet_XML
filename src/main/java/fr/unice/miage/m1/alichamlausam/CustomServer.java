@@ -1,5 +1,6 @@
 package fr.unice.miage.m1.alichamlausam;
 
+
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -16,7 +17,7 @@ public class CustomServer {
 
 
         Server server = new Server(2222);
-        ServletContextHandler context = new ServletContextHandler(server, "/rest/*");
+        ServletContextHandler context = new ServletContextHandler(server, "/*");
         context.addServlet(servlet, "/*");
 
 //        ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
@@ -45,5 +46,4 @@ public class CustomServer {
             //server.destroy();
         }
     }
-
 }

@@ -9,6 +9,9 @@
   <version>1.0-SNAPSHOT</version>
   <name>inriaprojxml Maven Webapp</name>
   <url>http://maven.apache.org</url>
+    <properties>
+        <jdk.version>1.8</jdk.version>
+    </properties>
   <dependencies>
       <!-- https://mvnrepository.com/artifact/com.sun.istack/istack-commons-runtime -->
       <dependency>
