@@ -1,176 +1,161 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
 
-  <groupId>fr.unice.miage.m1.alichamlausam</groupId>
-  <artifactId>inriaprojxml</artifactId>
-  <packaging>war</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>inriaprojxml Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-    <properties>
-        <jdk.version>1.8</jdk.version>
-    </properties>
-  <dependencies>
-      <!-- https://mvnrepository.com/artifact/com.sun.istack/istack-commons-runtime -->
-      <dependency>
-          <groupId>com.sun.istack</groupId>
-          <artifactId>istack-commons-runtime</artifactId>
-          <version>3.0.5</version>
-      </dependency>
+    <groupId>fr.unice.miage.m1.alichamlausam</groupId>
+    <artifactId>inriaprojxml</artifactId>
+    <packaging>war</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>inriaprojxml Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.sun.istack/istack-commons-runtime -->
+        <dependency>
+            <groupId>com.sun.istack</groupId>
+            <artifactId>istack-commons-runtime</artifactId>
+            <version>3.0.5</version>
+        </dependency>
 
 
-      <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/jaxb2-maven-plugin -->
-    <dependency>
-       <groupId>org.codehaus.mojo</groupId>
-       <artifactId>jaxb2-maven-plugin</artifactId>
-       <version>2.3.1</version>
-    </dependency>
-    <dependency>
-         <groupId>org.exist-db</groupId>
-         <artifactId>existdb-core</artifactId>
-         <version>2.1</version>
-       </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/jaxb2-maven-plugin -->
+        <dependency>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>jaxb2-maven-plugin</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.exist-db</groupId>
+            <artifactId>existdb-core</artifactId>
+            <version>2.1</version>
+        </dependency>
 
-   <!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
-      <dependency>
-          <groupId>javax.ws.rs</groupId>
-          <artifactId>javax.ws.rs-api</artifactId>
-          <version>2.1</version>
-      </dependency>
-
-
-   <!-- https://mvnrepository.com/artifact/org.xmldb/xmldb-api -->
-   <!-- https://mvnrepository.com/artifact/xmldb/xmldb-api -->
-   <dependency>
-       <groupId>xmldb</groupId>
-       <artifactId>xmldb-api</artifactId>
-       <version>20021118</version>
-   </dependency>
-
-   <!-- https://mvnrepository.com/artifact/exist/exist-xmldb -->
-   <dependency>
-       <groupId>exist</groupId>
-       <artifactId>exist-xmldb</artifactId>
-       <version>0.9.2</version>
-   </dependency>
-
-    <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.containers/jersey-container-servlet-core -->
-  <!-- <dependency>
-      <groupId>org.glassfish.jersey.containers</groupId>
-      <artifactId>jersey-container-servlet-core</artifactId>
-      <version>2.26</version>
-      <scope>provided</scope>
-  </dependency> 
-
-    <dependency>
-        <groupId>org.glassfish.jersey.containers</groupId>
-        <artifactId>jersey-container-grizzly2-http</artifactId>
-        <version>2.7</version>
-    </dependency>
-    <dependency>
-        <groupId>org.glassfish.jersey.containers</groupId>
-        <artifactId>jersey-container-servlet</artifactId>
-        <version>2.26</version>
-        <scope>provided</scope>
-
-    </dependency>
-    <dependency>
-        <groupId>org.glassfish.jersey.inject</groupId>
-        <artifactId>jersey-hk2</artifactId>
-        <version>2.26</version>
-    </dependency>
-
-    <dependency>
-        <groupId>org.glassfish.jersey.core</groupId>
-        <artifactId>jersey-server</artifactId>
-        <version>2.26</version>
-    </dependency>
- -->
-
-      <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
-      <dependency>
-          <groupId>javax.servlet</groupId>
-          <artifactId>javax.servlet-api</artifactId>
-          <version>3.1.0</version>
-          <scope>provided</scope>
-      </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
+        <!--<dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>2.1</version>
+        </dependency>-->
 
 
+        <!-- https://mvnrepository.com/artifact/org.xmldb/xmldb-api -->
+        <!-- https://mvnrepository.com/artifact/xmldb/xmldb-api -->
+        <dependency>
+            <groupId>xmldb</groupId>
+            <artifactId>xmldb-api</artifactId>
+            <version>20021118</version>
+        </dependency>
 
+        <!-- https://mvnrepository.com/artifact/exist/exist-xmldb -->
+        <dependency>
+            <groupId>exist</groupId>
+            <artifactId>exist-xmldb</artifactId>
+            <version>0.9.2</version>
+        </dependency>
 
-      <!-- https://mvnrepository.com/artifact/org.mortbay.jetty/jetty-maven-plugin -->
-      <!--<dependency>
-          <groupId>org.mortbay.jetty</groupId>
-          <artifactId>jetty-maven-plugin</artifactId>
-          <version>8.1.16.v20140903</version>
-          <scope>test</scope>
-      </dependency>
-      <dependency>
-          <groupId>org.eclipse.jetty</groupId>
-          <artifactId>jetty-server</artifactId>
-          <version>RELEASE</version>
-      </dependency>
-      <dependency>
-          <groupId>org.mortbay.jetty</groupId>
-          <artifactId>jetty</artifactId>
-          <version>6.1.25</version>
-      </dependency>
-      <dependency>
-          <groupId>org.mortbay.jetty</groupId>
-          <artifactId>jetty</artifactId>
-          <version>6.1.25</version>
-      </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.containers/jersey-container-servlet-core -->
+        <!-- <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet-core</artifactId>
+            <version>2.26</version>
+            <scope>provided</scope>
+        </dependency>
 
-      <dependency>
-          <groupId>org.eclipse.jetty</groupId>
-          <artifactId>jetty-server</artifactId>
-          <version>9.2.3.v20140905</version>
-          <scope>provided</scope>
-      </dependency>
-      <dependency>
-          <groupId>org.eclipse.jetty</groupId>
-          <artifactId>jetty-servlet</artifactId>
-          <version>9.2.3.v20140905</version>
-          <scope>provided</scope>
+          <dependency>
+              <groupId>org.glassfish.jersey.containers</groupId>
+              <artifactId>jersey-container-grizzly2-http</artifactId>
+              <version>2.7</version>
+          </dependency>
+          <dependency>
+              <groupId>org.glassfish.jersey.containers</groupId>
+              <artifactId>jersey-container-servlet</artifactId>
+              <version>2.26</version>
+              <scope>provided</scope>
 
-      </dependency>
-      <dependency>
-          <groupId>org.glassfish.jersey.core</groupId>
-          <artifactId>jersey-server</artifactId>
-          <version>2.7</version>
-          <scope>provided</scope>
+          </dependency>
+          <dependency>
+              <groupId>org.glassfish.jersey.inject</groupId>
+              <artifactId>jersey-hk2</artifactId>
+              <version>2.26</version>
+          </dependency>
 
-      </dependency>
-      <dependency>
-          <groupId>org.glassfish.jersey.containers</groupId>
-          <artifactId>jersey-container-servlet-core</artifactId>
-          <version>2.7</version>
-          <scope>provided</scope>
+          <dependency>
+              <groupId>org.glassfish.jersey.core</groupId>
+              <artifactId>jersey-server</artifactId>
+              <version>2.26</version>
+          </dependency>
+       -->
 
-      </dependency>
-      <dependency>
-          <groupId>org.glassfish.jersey.containers</groupId>
-          <artifactId>jersey-container-jetty-http</artifactId>
-          <version>2.7</version>
-          <scope>provided</scope>
-
-      </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+        <!--
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+  -->
+        <!-- https://mvnrepository.com/artifact/org.mortbay.jetty/jetty-maven-plugin -->
+        <!--<dependency>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jetty-maven-plugin</artifactId>
+            <version>8.1.16.v20140903</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jetty</artifactId>
+            <version>6.1.25</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jetty</artifactId>
+            <version>6.1.25</version>
+        </dependency>-->
 
 
 
-      
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>9.2.3.v20140905</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlet</artifactId>
+            <version>9.2.3.v20140905</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>2.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet-core</artifactId>
+            <version>2.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-jetty-http</artifactId>
+            <version>2.7</version>
+        </dependency>
 
-  </dependencies>
-  <build>
-    <finalName>inriaprojxml</finalName>
+
+    </dependencies>
+    <build>
+        <finalName>inriaprojxml</finalName>
         <plugins>
             <!--
                 If we e.g. execute on JDK 1.7, we should compile for Java 7 to get
@@ -201,169 +186,120 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.2.0</version>
                 <configuration>
-                        <archive>
-                            <manifest>
-                                <addClasspath>true</addClasspath>
-                            </manifest>
-                        </archive>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                    </archive>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
 
                 </configuration>
             </plugin>
-            
-        <!-- </plugins> -->
-    <!-- <plugins> -->
-          <plugin>
-              <groupId>org.codehaus.mojo</groupId>
-              <artifactId>jaxb2-maven-plugin</artifactId>
-              <version>2.3</version>
-        
-              <executions>
-                  <execution>
-                      <id>sr</id>
-              <!--<phase>generate-sources</phase>-->
-                      <goals>
-                          <goal>xjc</goal>
-                      </goals>
-                  <configuration>
-                    <encoding>UTF-8</encoding>
 
-                    <outputDirectory>src/main/java/bastri</outputDirectory>
-                    <packageName>org.inria.fr.ns.sr</packageName>
-                    <sources>
-                      <source>src/main/resources/schemas/bastri.xsd</source>
-                    </sources>
-                  
-                  </configuration>
-                </execution>
-                <execution>
-                    <id>cr</id>
-              <!--<phase>generate-sources</phase>-->
-                    <goals>
-                          <goal>xjc</goal>
-                      </goals>
-              <configuration>
-                <encoding>UTF-8</encoding>
-                <outputDirectory>src/main/java/bastriCris</outputDirectory>
-                <packageName>org.inria.fr.ns.cr</packageName>
-                <sources>
-                  <source>src/main/resources/schemas/bastriCris.xsd</source>
-                </sources>
-            
-              </configuration>
-                  </execution>
-              </executions>
-             
-          </plugin>
+            <!-- </plugins> -->
+            <!-- <plugins> -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxb2-maven-plugin</artifactId>
+                <version>2.3</version>
 
-          <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>exec-maven-plugin</artifactId>
-            <version>1.6.0</version>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>java</goal>
-                    </goals>
-                </execution>
-            </executions>
-            <configuration>
+                <executions>
+                    <execution>
+                        <id>sr</id>
+                        <!--<phase>generate-sources</phase>-->
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                        <configuration>
+                            <encoding>UTF-8</encoding>
 
-            </configuration>
-        </plugin>
+                            <outputDirectory>src/main/java/bastri</outputDirectory>
+                            <packageName>org.inria.fr.ns.sr</packageName>
+                            <sources>
+                                <source>src/main/resources/schemas/bastri.xsd</source>
+                            </sources>
 
-        <plugin>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-maven-plugin</artifactId>
-            <version>9.2.11.v20150529</version>
-        </plugin>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>cr</id>
+                        <!--<phase>generate-sources</phase>-->
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                        <configuration>
+                            <encoding>UTF-8</encoding>
+                            <outputDirectory>src/main/java/bastriCris</outputDirectory>
+                            <packageName>org.inria.fr.ns.cr</packageName>
+                            <sources>
+                                <source>src/main/resources/schemas/bastriCris.xsd</source>
+                            </sources>
 
-        <plugin>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.5</version>
-            <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-            </configuration>
-        </plugin>
+                        </configuration>
+                    </execution>
+                </executions>
 
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-war-plugin</artifactId>
-          <version>2.6</version>
-          <configuration>
-            <failOnMissingWebXml>false</failOnMissingWebXml>
-          </configuration>
-        </plugin>
-    </plugins>
-  </build>
+            </plugin>
 
-  <profiles>
-    <profile>
-      <id>jetty</id>
-      <dependencies>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-server</artifactId>
-            <version>9.2.3.v20140905</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-servlet</artifactId>
-            <version>9.2.3.v20140905</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.core</groupId>
-            <artifactId>jersey-server</artifactId>
-            <version>2.7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.containers</groupId>
-            <artifactId>jersey-container-servlet-core</artifactId>
-            <version>2.7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.containers</groupId>
-            <artifactId>jersey-container-jetty-http</artifactId>
-            <version>2.7</version>
-        </dependency>
-      </dependencies>
-      <properties>
-        <exec.mainClass>fr.unice.miage.m1.alichamlausam.CustomServer</exec.mainClass>
-      </properties>
-    </profile>
-    <profile>
-      <id>glassfish</id>
-      <properties>
-        <exec.mainClass>fr.unice.miage.m1.alichamlausam.XQueryUtil</exec.mainClass>
-      </properties>
-    </profile>
-  </profiles>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
 
-  
-  <properties>
-      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+                    <mainClass>fr.unice.miage.m1.alichamlausam.XQueryUtil</mainClass>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.2.11.v20150529</version>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-  <repositories>
-    <repository>
+    <repositories>
+        <repository>
             <id>exist</id>
             <url>https://raw.github.com/eXist-db/mvn-repo/master/</url>
-      </repository>
-  </repositories>
-
-
+        </repository>
+    </repositories>
 </project>
 
-<!--
-Code incomplet
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>Projet_XML</groupId>
-  <artifactId>Projet_XML</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-</project>-->
+        <!--
+        Code incomplet
+        <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+          <modelVersion>4.0.0</modelVersion>
+          <groupId>Projet_XML</groupId>
+          <artifactId>Projet_XML</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+        </project>-->
