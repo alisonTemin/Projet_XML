@@ -6,7 +6,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 
 
-@Path("/centrederecherche") //path de la classe 
+@Path("/centrederecherche") //path de la classe
 public class CentreDeRechercheService {
 
 	@Path("/id") //path de methode
