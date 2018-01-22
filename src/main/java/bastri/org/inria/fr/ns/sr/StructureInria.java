@@ -6,7 +6,7 @@
 //
 
 
-package org.inria.fr.ns.sr;
+package bastri.org.inria.fr.ns.sr;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,7 +76,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "resume"
 })
 @XmlRootElement(name = "structureinria")
-public class Structureinria {
+public class StructureInria {
 
     @XmlElement(required = true)
     protected String siidEquipeGroupe;

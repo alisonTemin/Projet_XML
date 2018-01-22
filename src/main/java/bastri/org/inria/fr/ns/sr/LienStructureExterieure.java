@@ -6,7 +6,7 @@
 //
 
 
-package org.inria.fr.ns.sr;
+package bastri.org.inria.fr.ns.sr;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

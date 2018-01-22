@@ -6,7 +6,7 @@
 //
 
 
-package org.inria.fr.ns.sr;
+package bastri.org.inria.fr.ns.sr;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
@@ -37,19 +37,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link StructureInrias }
+     * Create an instance of {@link StructuresInria }
      * 
      */
-    public StructureInrias createStructureInrias() {
-        return new StructureInrias();
+    public StructuresInria createStructuresInria() {
+        return new StructuresInria();
     }
 
     /**
-     * Create an instance of {@link Structureinria }
+     * Create an instance of {@link StructureInria }
      * 
      */
-    public Structureinria createStructureinria() {
-        return new Structureinria();
+    public StructureInria createStructureinria() {
+        return new StructureInria();
     }
 
     /**

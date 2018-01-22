@@ -6,4 +6,4 @@
 //
 
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://ns.inria.fr/dsi/si/app/bastri", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package org.inria.fr.ns.sr;
+package bastri.org.inria.fr.ns.sr;

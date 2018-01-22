@@ -6,7 +6,7 @@
 //
 
 
-package org.inria.fr.ns.cr;
+package bastriCris.org.inria.fr.ns.cr;
 
 import java.util.ArrayList;
 import java.util.List;

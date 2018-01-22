@@ -6,7 +6,7 @@
 //
 
 
-package org.inria.fr.ns.sr;
+package bastri.org.inria.fr.ns.sr;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,7 +72,7 @@ public class Entite {
     @XmlElement(name = "lien_structure_exterieure")
     protected List<LienStructureExterieure> lienStructureExterieure;
     @XmlAttribute(name = "principal")
-    protected String principal;
+    protected boolean principal;
     @XmlAttribute(name = "codestructure")
     protected String codestructure;
     @XmlAttribute(name = "siid")
@@ -259,7 +259,7 @@ public class Entite {
      *     {@link String }
      *     
      */
-    public String getPrincipal() {
+    public boolean getPrincipal() {
         return principal;
     }
 
@@ -272,7 +272,11 @@ public class Entite {
      *     
      */
     public void setPrincipal(String value) {
-        this.principal = value;
+        if(value == "1")  {
+            this.principal = true;
+        } else if (value == "0") {
+            this.principal = false;
+        }
     }
 
     /**

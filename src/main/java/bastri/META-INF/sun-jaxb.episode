@@ -13,10 +13,10 @@ Généré le : 2018.01.21 à 09:34:42 PM CET
       <package name="org.inria.fr.ns.sr"/>
     </schemaBindings>
     <bindings scd="tns:structureInrias">
-      <class ref="org.inria.fr.ns.sr.StructureInrias"/>
+      <class ref="org.inria.fr.ns.sr.StructuresInria"/>
     </bindings>
     <bindings scd="tns:structureinria">
-      <class ref="org.inria.fr.ns.sr.Structureinria"/>
+      <class ref="org.inria.fr.ns.sr.StructureInria"/>
     </bindings>
     <bindings scd="~tns:urlTeam">
       <class ref="org.inria.fr.ns.sr.UrlTeam"/>

@@ -1,7 +1,9 @@
 package fr.unice.miage.m1.alichamlausam;
 
 //import com.oracle.xmlns.internal.webservices.jaxws_databinding.ObjectFactory;
-import  org.inria.fr.ns.sr.ObjectFactory;
+
+import bastri.org.inria.fr.ns.sr.ObjectFactory;
+import bastri.org.inria.fr.ns.sr.StructuresInria;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
@@ -17,22 +19,18 @@ public class JaxbOnBastri {
 
             Unmarshaller unmarshaller = jc.createUnmarshaller();
 
-            org.inria.fr.ns.sr.StructureInrias structureInrias = (org.inria.fr.ns.sr.StructureInrias) unmarshaller.unmarshal(new File("bastri.xml"));
+            StructuresInria structuresInria = (StructuresInria) unmarshaller.unmarshal(new File("bastri.xml"));
 
 
-
-            List<?> details = structureInrias.getStructureinria();
-
+            List<?> details = structuresInria.getStructureinria();
 
 
+            System.out.println("Structure Inria :  ");
 
-                System.out.println("Structure Inria :  ");
-
-                System.out.println("Détails   : " +  details);
+            System.out.println("Détails   : " + details);
 
 
-                System.out.println();
-
+            System.out.println();
 
 
         } catch (Exception e) {

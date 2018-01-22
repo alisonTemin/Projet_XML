@@ -6,7 +6,7 @@
 //
 
 
-package org.inria.fr.ns.sr;
+package bastri.org.inria.fr.ns.sr;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,9 +40,9 @@ import javax.xml.bind.annotation.XmlType;
     "structureinria"
 })
 @XmlRootElement(name = "structureInrias")
-public class StructureInrias {
+public class StructuresInria {
 
-    protected List<Structureinria> structureinria;
+    protected List<StructureInria> structureinria;
 
     /**
      * Gets the value of the structureinria property.
@@ -62,13 +62,13 @@ public class StructureInrias {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Structureinria }
+     * {@link StructureInria }
      * 
      * 
      */
-    public List<Structureinria> getStructureinria() {
+    public List<StructureInria> getStructureinria() {
         if (structureinria == null) {
-            structureinria = new ArrayList<Structureinria>();
+            structureinria = new ArrayList<StructureInria>();
         }
         return this.structureinria;
     }

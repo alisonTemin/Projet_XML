@@ -6,7 +6,7 @@
 //
 
 
-package org.inria.fr.ns.cr;
+package bastriCris.org.inria.fr.ns.cr;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
