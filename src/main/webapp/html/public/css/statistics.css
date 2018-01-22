@@ -12,7 +12,7 @@ figcaption {
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
   #columnChartDiv {
-    padding-left: 80px;
+    padding-left: 20px;
   }
 }
 /*
