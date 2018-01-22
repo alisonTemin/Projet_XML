@@ -1,6 +1,7 @@
 package fr.unice.miage.m1.alichamlausam;
 
-import com.oracle.xmlns.internal.webservices.jaxws_databinding.ObjectFactory;
+//import com.oracle.xmlns.internal.webservices.jaxws_databinding.ObjectFactory;
+import  org.inria.fr.ns.sr.ObjectFactory;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;

@@ -23,7 +23,7 @@ function remplirTableCentreDeRecherche(){
       crDonnees.push([crList[i].getAttribute('siid'),crList[i].querySelector('libelle').innerHTML,crList[i].querySelector('ville').innerHTML,crList[i].querySelector('date_ouverture').innerHTML,crList[i].querySelector('date_fermeture').innerHTML,'','']);
     }
 
-    $('#crTable').dataTable({data: crDonnees});
+    $('#crTable').DataTable({data: crDonnees});
     // var dtable = new webix.ui({container: 'crFakeTable',view: 'datatable',data: crList});
     //Variable qui recupere l'ID crTable
     // var firstCol = document.querySelectorAll("#crTable tr th:first-child");
