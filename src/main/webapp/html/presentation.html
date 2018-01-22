@@ -13,7 +13,7 @@
 		window.addEventListener("load" , function(e){
 
             //"http://localhost:8082/inriaprojxml/rest/personne/total"
-			fetch("http://localhost:8082/inriaprojxml/rest/personne/total").then(function (reponse) {
+			fetch("http://localhost:2222/personne/total").then(function (reponse) {
 				return reponse.text();
 			}).then(function(text){
 				document.getElementById("NbreTotalDePersonne").innerHTML=text;

@@ -8,20 +8,99 @@ function initMapCenters() {
     center: latlng,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
-  //alert(Object.keys(options));
-  //alert(Object.values(options));
 
   var researchCentersMap = new google.maps.Map(document.getElementById("researchCentersMap"), options);
-
-  var marqueur = new google.maps.Marker({
-    position: new google.maps.LatLng(43.696, 7.289429),
+  var marqueurBordeaux = new google.maps.Marker({
+    position: new google.maps.LatLng(44.8115143, -0.6002006999999594),
     map: researchCentersMap,
-    title: "Nice"
+    title: "Bordeaux"
   });
-  var marqueur1 = new google.maps.Marker({
-    position: new google.maps.LatLng(48.854733, 2.350879),
+  var marqueurGrenoble = new google.maps.Marker({
+    position: new google.maps.LatLng(45.217886, 5.807368999999994),
+    map: researchCentersMap,
+    title: "Grenoble"
+  });
+  var marqueurLille = new google.maps.Marker({
+    position: new google.maps.LatLng(50.6053272, 3.1483005999999705),
+    map: researchCentersMap,
+    title: "Lille"
+  });
+  var marqueurNancy = new google.maps.Marker({
+    position: new google.maps.LatLng(48.6640104, 6.155632999999966),
+    map: researchCentersMap,
+    title: "Nancy"
+  });
+  var marqueurParis = new google.maps.Marker({
+    position: new google.maps.LatLng(48.8414997, 2.384722799999963),
     map: researchCentersMap,
     title: "Paris"
+  });
+  var marqueurRennes = new google.maps.Marker({
+    position: new google.maps.LatLng(48.1157339, -1.6371321999999964),
+    map: researchCentersMap,
+    title: "Rennes"
+  });
+  var marqueurSophia = new google.maps.Marker({
+    position: new google.maps.LatLng(43.6158131, 7.068379999999934),
+    map: researchCentersMap,
+    title: "Sophia"
+  });
+  var marqueurSaclay = new google.maps.Marker({
+    position: new google.maps.LatLng(48.714509, 2.2457481000000143),
+    map: researchCentersMap,
+    title: "Saclay"
+  });
+
+  google.maps.event.addListener(marqueurBordeaux,'click',function() {
+    var infowindow = new google.maps.InfoWindow({
+      content:"CRI Bordeaux<br>200 Avenue de la Vieille Tour<br>33400 Talence"
+    });
+    infowindow.open(researchCentersMap,marqueurBordeaux);
+  });
+  google.maps.event.addListener(marqueurGrenoble,'click',function() {
+    var infowindow = new google.maps.InfoWindow({
+      content:"CRI Grenoble<br>655 Avenue de l'Europe<br>38330 Montbonnot-Saint-Martin"
+    });
+    infowindow.open(researchCentersMap,marqueurGrenoble);
+  });
+  google.maps.event.addListener(marqueurLille,'click',function() {
+    var infowindow = new google.maps.InfoWindow({
+      content:"CRI Lille<br>Parc Scientifique de la Haute Borne<br>40 avenue Halley Bât.A<br>Park Plaza"+
+      "<br>59650 Villeneuve d'Ascq"
+    });
+    infowindow.open(researchCentersMap,marqueurLille);
+  });
+  google.maps.event.addListener(marqueurNancy,'click',function() {
+    var infowindow = new google.maps.InfoWindow({
+      content:"CRI Nancy<br>615 Rue du Jardin Botanique<br>54600 Villers-lès-Nancy"
+    });
+    infowindow.open(researchCentersMap,marqueurNancy);
+  });
+  google.maps.event.addListener(marqueurParis,'click',function() {
+    var infowindow = new google.maps.InfoWindow({
+      content:"CRI Paris<br>2 rue Simone Iff<br>75012 Paris"
+    });
+    infowindow.open(researchCentersMap,marqueurParis);
+  });
+  google.maps.event.addListener(marqueurRennes,'click',function() {
+    var infowindow = new google.maps.InfoWindow({
+      content:"CRI Rennes<br>Campus de Beaulieu<br>263 avenue du Général Leclerc"+
+      "<br>35042 Rennes"
+    });
+    infowindow.open(researchCentersMap,marqueurRennes);
+  });
+  google.maps.event.addListener(marqueurSophia,'click',function() {
+    var infowindow = new google.maps.InfoWindow({
+      content:"CRI Sophia Antipolis<br>2004 route des Lucioles<br>06902 Sophia Antipolis"
+    });
+    infowindow.open(researchCentersMap,marqueurSophia);
+  });
+  google.maps.event.addListener(marqueurSaclay,'click',function() {
+    var infowindow = new google.maps.InfoWindow({
+      content:"CRI Saclay<br>Bâtiment Alan Turing<br>1 rue Honoré d'Estienne d'Orves<br>Campus de l'École Polytechnique"+
+      "<br>91120 Palaiseau"
+    });
+    infowindow.open(researchCentersMap,marqueurSaclay);
   });
 }
 /*
@@ -51,27 +130,3 @@ ajouterContenuCR(lib,dateOuv,adr, dcr,ds,da,vpcp);
 }
 });
 */
-/*
-var map = new google.maps.Map(document.getElementById('researchCentersMap'), {
-zoom: 2,
-center: new google.maps.LatLng(2.8,-187.3)
-});
-// Create a <script> tag and set the USGS URL as the source.
-var script = document.createElement('script');
-// This example uses a local copy of the GeoJSON stored at http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
-document.getElementsByTagName('head')[0].appendChild(script);
-}
-
-// Loop through the results array and place a marker for each
-// set of coordinates.
-window.eqfeed_callback = function(results) {
-for (var i = 0; i < results.features.length; i++) {
-var coords = results.features[i].geometry.coordinates;
-var latLng = new google.maps.LatLng(coords[1],coords[0]);
-var marker = new google.maps.Marker({
-position: latLng,
-map: map
-});
-}
-}*/
