@@ -24,3 +24,8 @@ html, body {
 .left {
   text-align: left;
 }
+
+.buttonsTableDiv {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}

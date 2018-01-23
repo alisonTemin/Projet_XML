@@ -9,19 +9,19 @@ import javax.ws.rs.core.MediaType;
 @Path("/centrederecherche") //path de la classe
 public class CentreDeRechercheService {
 
-	@Path("/id") //path de methode
-	@GET
-	@Produces({MediaType.TEXT_PLAIN})
-	public String getIdCentreDeRecherche(){
-		return XQueryUtil.execXQuery("mi:recuppererIDDeCentreDeRecherche()");
-	}
-
-
 	@Path("/details")//path de methode
 	@GET
 	@Produces({MediaType.TEXT_PLAIN})
 	public String getDetailsCentreDeRecherche(){
-		return XQueryUtil.execXQuery("mi:recuppererDetailsCentreDeRecherche()");
+		return XQueryUtil.execXQuery("mi:recupererDetailsCentreDeRecherche()");
+	}
+
+
+	@Path("/personnes")//path de methode
+	@GET
+	@Produces({MediaType.TEXT_PLAIN})
+	public String getNbPersonnesCentreDeRecherche(){
+		return XQueryUtil.execXQuery("mi:recupererNbPersonnesCentreDeRecherche()");
 	}
 
 

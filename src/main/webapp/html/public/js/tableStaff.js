@@ -1,40 +1,42 @@
-function fillTeamsTable() {
+function fillStaffTable() {
     //Appel ajax
-    //http:localhost:2222/equipe/details
-    fetch("http://localhost:2222/equipe/details").then(function (reponse) {
+    //http:localhost:2222/personnel/details
+    fetch("http://localhost:2222/personnel/details").then(function (reponse) {
         return reponse.text();
     }).then(function (text) {
         var dp = new DOMParser();
         var xml = dp.parseFromString(text, "application/xml").documentElement;
-        var teamList = xml.querySelectorAll("projects project");
-        var tTable = document.querySelector("#tTable tbody");
+        var staffList = xml.querySelectorAll("projects project team person");
+        console.log(xml.querySelectorAll("projects project"));
+        console.log(staffList);
+        var pTable = document.querySelector("#pTable tbody");
         var i = 0;
-        if (tTable.firstChild.className == "no-records-found") {
-            var trFirst = tTable.firstChild;
+        if (pTable.firstChild.className == "no-records-found") {
+            var trFirst = pTable.firstChild;
             trFirst.classList.remove("no-records-found");
             trFirst.removeChild(trFirst.firstChild);
-            for (var j = 0; j < teamList[i].children.length; j++) {
+            for (var j = 0; j < staffList[i].children.length; j++) {
                 var td = document.createElement('td');
-                td.innerHTML = teamList[i].children[j].innerHTML;
+                td.innerHTML = staffList[i].children[j].innerHTML;
                 trFirst.appendChild(td);
             }
             i = 1;
         }
-        for (i; i < teamList.length; i++) {
+        for (i; i < staffList.length; i++) {
             var tr = document.createElement('tr');
-            for (var j = 0; j < teamList[i].children.length; j++) {
+            for (var j = 0; j < staffList[i].children.length; j++) {
                 var td = document.createElement('td');
-                td.innerHTML = teamList[i].children[j].innerHTML;
+                td.innerHTML = staffList[i].children[j].innerHTML;
                 tr.appendChild(td);
             }
-            tTable.appendChild(tr);
+            pTable.appendChild(tr);
         }
     });
 }
 
 function sortTable(n) {
     var rows, i, x, y, shouldSwitch, switchcount = 0;
-    var crTable = document.getElementById("tTable");
+    var crTable = document.getElementById("pTable");
     var switching = true;
     //Set the sorting direction to ascending:
     var dir = "asc";

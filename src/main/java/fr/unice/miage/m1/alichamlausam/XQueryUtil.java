@@ -23,7 +23,7 @@ import javax.xml.bind.DatatypeConverter;
 */
 public class XQueryUtil {
 
-	public static final String OUTPUT_FILE = "groupe.xqy";
+	public static final String OUTPUT_FILE = "requetesXquery.xqy"; //"groupe.xqy";
 
 	public static final String LIEN_COLLECTION = "http://localhost:8080/exist/rest/db/raweb/";
 
@@ -33,6 +33,7 @@ public class XQueryUtil {
 		String credEnc = getEncodedCredentials();
 		try{
 			URL url =new URL(LIEN_COLLECTION+OUTPUT_FILE+"?fn="+nomFunction);
+			System.out.println(url.toString());
 			HttpURLConnection huc = (HttpURLConnection)url.openConnection();
 			huc.setRequestMethod("GET");
 			huc.setRequestProperty("Authorization","Basic " + credEnc );
@@ -56,7 +57,7 @@ public class XQueryUtil {
 
 	private static String getEncodedCredentials(){
 		//Authencification de la base de donnée (http basic authorization)
-		String auth = "admin:";
+		String auth = "admin:root";
 		//1 ça prend le usname:  le mot de passe
 		//2 le crypter avec le system base64
 		//3 rajouter une entete qui s'appelle authorization dans la requete http qui a coe valeur "Basic " suivie par le precedent
@@ -69,7 +70,7 @@ public class XQueryUtil {
 		try {
 			String credEnc =getEncodedCredentials();
 
-			//Se connecter a existbd et y uploader le fichier groupe.xqy
+			//Se connecter a existbd et y uploader le fichier requetesXquery.xqy //groupe.xqy
 			URL url = new URL(LIEN_COLLECTION+ OUTPUT_FILE );
 			System.out.println(url);
 			HttpURLConnection huc = (HttpURLConnection)url.openConnection();
@@ -102,7 +103,7 @@ public class XQueryUtil {
 
 
 	public static void main(String[] args) {
-		uploadFile("requetes.xqy");
+		uploadFile("requetesXquery.xqy");
 		Runtime rt = Runtime.getRuntime();
 		System.out.println(System.getenv("PATH"));
 		try {
