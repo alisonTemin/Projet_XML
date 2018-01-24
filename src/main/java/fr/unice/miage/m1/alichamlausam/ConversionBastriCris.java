@@ -2,9 +2,9 @@ package fr.unice.miage.m1.alichamlausam;
 
 //import com.oracle.xmlns.internal.webservices.jaxws_databinding.ObjectFactory;
 
-import bastri.org.inria.fr.ns.sr.ObjectFactory;
-import bastri.org.inria.fr.ns.sr.StructuresInria;
-import bastriCris.org.inria.fr.ns.cr.*;
+import org.inria.fr.ns.sr.ObjectFactory;
+import org.inria.fr.ns.sr.StructuresInria;
+import org.inria.fr.ns.cr.*;
 import java.net.URL;
 
 import javax.xml.bind.JAXBContext;
@@ -18,7 +18,7 @@ public class ConversionBastriCris {
 
         try {
             ObjectFactory objectFactory = new ObjectFactory();
-            JAXBContext jc = JAXBContext.newInstance("bastriCris.org.inria.fr.ns.cr");
+            JAXBContext jc = JAXBContext.newInstance("org.inria.fr.ns.cr");
 
             Unmarshaller unmarshaller = jc.createUnmarshaller();
 

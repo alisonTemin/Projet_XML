@@ -5,66 +5,66 @@
 Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
 Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-Généré le : 2018.01.24 à 11:06:21 PM CET 
+Généré le : 2018.01.25 à 12:02:38 AM CET 
 
   -->
   <bindings scd="x-schema::tns" xmlns:tns="http://ns.inria.fr/dsi/si/app/bastri">
     <schemaBindings map="false">
-      <package name="bastri.org.inria.fr.ns.sr"/>
+      <package name="org.inria.fr.ns.sr"/>
     </schemaBindings>
     <bindings scd="tns:structureInrias">
-      <class ref="bastri.org.inria.fr.ns.sr.StructureInrias"/>
+      <class ref="org.inria.fr.ns.sr.StructureInrias"/>
     </bindings>
     <bindings scd="tns:structureinria">
-      <class ref="bastri.org.inria.fr.ns.sr.Structureinria"/>
+      <class ref="org.inria.fr.ns.sr.Structureinria"/>
     </bindings>
     <bindings scd="~tns:urlTeam">
-      <class ref="bastri.org.inria.fr.ns.sr.UrlTeam"/>
+      <class ref="org.inria.fr.ns.sr.UrlTeam"/>
     </bindings>
     <bindings scd="~tns:keywords">
-      <class ref="bastri.org.inria.fr.ns.sr.Keywords"/>
+      <class ref="org.inria.fr.ns.sr.Keywords"/>
     </bindings>
     <bindings scd="~tns:domaine">
-      <class ref="bastri.org.inria.fr.ns.sr.Domaine"/>
+      <class ref="org.inria.fr.ns.sr.Domaine"/>
     </bindings>
     <bindings scd="~tns:theme">
-      <class ref="bastri.org.inria.fr.ns.sr.Theme"/>
+      <class ref="org.inria.fr.ns.sr.Theme"/>
     </bindings>
     <bindings scd="~tns:entite">
-      <class ref="bastri.org.inria.fr.ns.sr.Entite"/>
+      <class ref="org.inria.fr.ns.sr.Entite"/>
     </bindings>
     <bindings scd="~tns:resume">
-      <class ref="bastri.org.inria.fr.ns.sr.Resume"/>
+      <class ref="org.inria.fr.ns.sr.Resume"/>
     </bindings>
     <bindings scd="~tns:corps">
-      <class ref="bastri.org.inria.fr.ns.sr.Corps"/>
+      <class ref="org.inria.fr.ns.sr.Corps"/>
     </bindings>
     <bindings scd="~tns:cri">
-      <class ref="bastri.org.inria.fr.ns.sr.Cri"/>
+      <class ref="org.inria.fr.ns.sr.Cri"/>
     </bindings>
     <bindings scd="~tns:personne">
-      <class ref="bastri.org.inria.fr.ns.sr.Personne"/>
+      <class ref="org.inria.fr.ns.sr.Personne"/>
     </bindings>
     <bindings scd="~tns:adressegeographique">
-      <class ref="bastri.org.inria.fr.ns.sr.Adressegeographique"/>
+      <class ref="org.inria.fr.ns.sr.Adressegeographique"/>
     </bindings>
     <bindings scd="~tns:lien_structure_exterieure">
-      <class ref="bastri.org.inria.fr.ns.sr.LienStructureExterieure"/>
+      <class ref="org.inria.fr.ns.sr.LienStructureExterieure"/>
     </bindings>
     <bindings scd="~tns:structure_exterieure">
-      <class ref="bastri.org.inria.fr.ns.sr.StructureExterieure"/>
+      <class ref="org.inria.fr.ns.sr.StructureExterieure"/>
     </bindings>
     <bindings scd="~tns:umr">
-      <class ref="bastri.org.inria.fr.ns.sr.Umr"/>
+      <class ref="org.inria.fr.ns.sr.Umr"/>
     </bindings>
     <bindings scd="~tns:directeur">
-      <class ref="bastri.org.inria.fr.ns.sr.Directeur"/>
+      <class ref="org.inria.fr.ns.sr.Directeur"/>
     </bindings>
     <bindings scd="~tns:composition">
-      <class ref="bastri.org.inria.fr.ns.sr.Composition"/>
+      <class ref="org.inria.fr.ns.sr.Composition"/>
     </bindings>
     <bindings scd="~tns:researchStructureCategory">
-      <typesafeEnumClass ref="bastri.org.inria.fr.ns.sr.ResearchStructureCategory"/>
+      <typesafeEnumClass ref="org.inria.fr.ns.sr.ResearchStructureCategory"/>
     </bindings>
   </bindings>
 </bindings>

@@ -7,11 +7,11 @@
 		jxb:extensionBindingPrefixes="xjc"
 		version="2.0">
 
-		<xjc:javaType name="java.time.LocalDate" type="xs:date" hasNsContext="false" adapter="bastriCris.org.inria.fr.ns.cr.DateAdapter"/>
+		<xjc:javaType name="java.time.LocalDate" type="xs:date" hasNsContext="false" adapter="fr.unice.miage.m1.alichamlausam.DateAdapter"/>
 		
-		<xjc:javaType name="java.time.LocalDateTime" type="xs:datetime" hasNsContext="false" adapter="bastriCris.org.inria.fr.ns.cr.DateTimeAdapter"/>
+		<xjc:javaType name="java.time.LocalDateTime" type="xs:datetime" hasNsContext="false" adapter="fr.unice.miage.m1.alichamlausam.DateTimeAdapter"/>
 
-		<xjc:javaType name="java.lang.Boolean" type="xs:boolean" hasNsContext="false" adapter="bastriCris.org.inria.fr.ns.cr.BooleanAdapter"/>
+		<xjc:javaType name="java.lang.Boolean" type="xs:boolean" hasNsContext="false" adapter="fr.unice.miage.m1.alichamlausam.BooleanAdapter"/>
 		
 		 
 

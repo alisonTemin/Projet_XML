@@ -8,7 +8,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 import javax.xml.bind.*;
-import bastriCris.org.inria.fr.ns.cr.*;
+import org.inria.fr.ns.cr.*;
 
 @Path("/centrederecherche") //path de la classe
 public class CentreDeRechercheService {
