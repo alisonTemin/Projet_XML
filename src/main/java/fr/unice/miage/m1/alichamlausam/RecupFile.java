@@ -25,6 +25,7 @@ public class RecupFile {
 
     @GET
     @Path("/bastriCris")
+    @Produces({MediaType.TEXT_PLAIN})
     public String getBastriCris() throws IOException {
         File f = new File(System.getProperty("user.dir") + File.separatorChar + "bastriCris.xml");
         byte[] tab = Files.readAllBytes(Paths.get(f.toURI()));

@@ -1,5 +1,8 @@
 package fr.unice.miage.m1.alichamlausam;
 
+import javax.ws.rs.GET;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -59,39 +62,6 @@ public class Download
 
     }
 
-  
-    public static void main(String[] args) throws ParseException {
-
-        String linkBastri = new String("http://www-sop.inria.fr/members/Philippe.Poulard/projet/2017/bastri.xml");
-
-        getFile(linkBastri);
-
-
-
-        File fileBastri = new File("bastri.xml");
-        Long lastModifiedBastri = fileBastri.lastModified();
-        Date dateBastri = new Date(lastModifiedBastri);
-        System.out.println("File bastri.xml download on : " + dateBastri);
-
-        String linkBastriCris = new String("http://www-sop.inria.fr/members/Philippe.Poulard/projet/2017/bastriCris.xml");
-        getFile(linkBastriCris);
-
-        File fileBastriCris = new File("bastri.xml");
-        Long lastModifiedBastriCris = fileBastriCris.lastModified();
-        Date dateBastriCris = new Date(lastModifiedBastriCris);
-        System.out.println("File bastriCris.xml download on : " + dateBastriCris);
-
-        SimpleDateFormat dateFormatter = new SimpleDateFormat("dd-MM-yyyy");
-        Date todayDate = dateFormatter.parse(dateFormatter.format(new Date()));
-
-        if(dateBastri.compareTo(todayDate) == -1){
-            getFile(linkBastri);
-            System.out.println("File bastri.xml new download on : " + dateBastri);
-            getFile(linkBastriCris);
-            System.out.println("File bastriCris.xml new download on : " + dateBastriCris);
-        }
-
-    }
 
     }
 
