@@ -66,6 +66,8 @@ public class Download
 
         getFile(linkBastri);
 
+
+
         File fileBastri = new File("bastri.xml");
         Long lastModifiedBastri = fileBastri.lastModified();
         Date dateBastri = new Date(lastModifiedBastri);

@@ -7,7 +7,11 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.servlet.ServletContainer;
 
+import javax.servlet.ServletContext;
+
 public class CustomServer {
+
+    private static ServletContextHandler context;
 
     public static void main(String[] args) {
 
@@ -15,10 +19,11 @@ public class CustomServer {
         config.packages("fr.unice.miage.m1.alichamlausam");
         ServletHolder servlet = new ServletHolder(new ServletContainer(config));
 
-
         Server server = new Server(2222);
         ServletContextHandler context = new ServletContextHandler(server, "/*");
         context.addServlet(servlet, "/*");
+
+
 
 //        ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
 //        context.setContextPath("/");
@@ -45,5 +50,11 @@ public class CustomServer {
         } finally {
             //server.destroy();
         }
+
     }
+
+    public static ServletContextHandler getServletContext() {
+        return context;
+    }
+
 }
