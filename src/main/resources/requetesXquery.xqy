@@ -15,7 +15,7 @@ declare function mi:appelerFonction() as node()* {
 
 (: Cette fonction renvoie tous les libellés, les villes et les dates d'ouverture des centres :)
 declare function mi:recupererDetailsCentreDeRecherche()as node()*{
-   let $res := for $cr in doc("http://localhost:63342/inriaprojxml/src/main/webapp/bastriCris.xml")/crs/cr
+   let $res := for $cr in doc("http://localhost:2222//src/main/webapp/bastriCris.xml")/crs/cr
         order by $cr/adressegeographique/libelle
         return <cr>
             {$cr/libelle}
