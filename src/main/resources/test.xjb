@@ -1,0 +1,32 @@
+<jxb:bindings version="1.0"
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<jxb:globalbindings
+		xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+		jxb:extensionBindingPrefixes="xjc"
+		version="2.0">
+
+		<xjc:javaType name="java.time.LocalDate" type="xs:date" hasNsContext="false" adapter="bastriCris.org.inria.fr.ns.cr.DateAdapter"/>
+		
+		<xjc:javaType name="java.time.LocalDateTime" type="xs:datetime" hasNsContext="false" adapter="bastriCris.org.inria.fr.ns.cr.DateTimeAdapter"/>
+
+		<xjc:javaType name="java.lang.Boolean" type="xs:boolean" hasNsContext="false" adapter="bastriCris.org.inria.fr.ns.cr.BooleanAdapter"/>
+		
+		 
+
+	</jxb:globalbindings>
+
+
+	<jxb:bindings schemaLocation="schemas/bastri.xsd">
+		<jxb:schemaBindings>
+			<jxb:package name="bastri.org.inria.fr.ns.sr"/>
+		</jxb:schemaBindings>
+	</jxb:bindings>
+
+	<jxb:bindings schemaLocation="schemas/bastriCris.xsd">
+		<jxb:schemaBindings>
+			<jxb:package name="bastriCris.org.inria.fr.ns.cr"/>
+		</jxb:schemaBindings>
+	</jxb:bindings>
+</jxb:bindings>
