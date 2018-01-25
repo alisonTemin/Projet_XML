@@ -1,14 +1,10 @@
 package fr.unice.miage.m1.alichamlausam;
 
-import javax.xml.transform.dom.*;
-import org.w3c.dom.*;
 import javax.ws.rs.GET;
 import javax.ws.rs.Produces;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
-import java.util.List;
-import javax.xml.bind.*;
-import org.inria.fr.ns.cr.*;
+import bastriCris.org.inria.fr.ns.cr.Crs;
 
 @Path("/centrederecherche") //path de la classe
 public class CentreDeRechercheService {
@@ -26,14 +22,12 @@ public class CentreDeRechercheService {
 
 	}
 
-
 	@Path("/personnes")//path de methode
 	@GET
 	@Produces({MediaType.TEXT_PLAIN})
 	public String getNbPersonnesCentreDeRecherche(){
 		return XQueryUtil.execXQuery("mi:recupererNbPersonnesCentreDeRecherche()");
 	}
-
 
 	@GET
 	@Produces({MediaType.TEXT_PLAIN})

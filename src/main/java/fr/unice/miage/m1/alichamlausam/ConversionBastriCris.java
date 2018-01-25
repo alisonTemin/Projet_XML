@@ -1,16 +1,11 @@
 package fr.unice.miage.m1.alichamlausam;
 
-//import com.oracle.xmlns.internal.webservices.jaxws_databinding.ObjectFactory;
-
-import org.inria.fr.ns.sr.ObjectFactory;
-import org.inria.fr.ns.sr.StructuresInria;
-import org.inria.fr.ns.cr.*;
+import bastri.org.inria.fr.ns.sr.ObjectFactory;
+import bastriCris.org.inria.fr.ns.cr.*;
 import java.net.URL;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
-import java.io.File;
-import java.util.List;
 
 public class ConversionBastriCris {
 

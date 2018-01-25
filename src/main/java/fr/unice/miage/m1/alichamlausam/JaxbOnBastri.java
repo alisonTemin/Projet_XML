@@ -1,9 +1,7 @@
 package fr.unice.miage.m1.alichamlausam;
 
-//import com.oracle.xmlns.internal.webservices.jaxws_databinding.ObjectFactory;
-
-import org.inria.fr.ns.sr.ObjectFactory;
-import org.inria.fr.ns.sr.StructuresInria;
+import bastri.org.inria.fr.ns.sr.ObjectFactory;
+import bastri.org.inria.fr.ns.sr.StructuresInria;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
@@ -21,9 +19,7 @@ public class JaxbOnBastri {
 
             StructuresInria structuresInria = (StructuresInria) unmarshaller.unmarshal(new File("bastri.xml"));
 
-
             List<?> details = structuresInria.getStructureInria();
-
 
             System.out.println("Structure Inria :  ");
 
