@@ -14,18 +14,4 @@ public class PersonnelService {
     public String getDetailsPersonnel(){
         return XQueryUtil.execXQuery("mi:recupererDetailsPersonnel()");
     }
-
-    @Path("/rapports")//path de methode
-    @GET
-    @Produces({MediaType.TEXT_PLAIN})
-    public String getDetailsRapportsPersonnel(){
-        return XQueryUtil.execXQuery("mi:recupererDetailsRapportsPersonnel()");
-    }
-
-    @Path("/nb-rapports")//path de methode
-    @GET
-    @Produces({MediaType.TEXT_PLAIN})
-    public String getNbRapportsPersonnel(){
-        return XQueryUtil.execXQuery("mi:recupererNbRapportsPersonnel()");
-    }
 }
