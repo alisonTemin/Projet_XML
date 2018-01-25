@@ -44,10 +44,10 @@ function fillStaffTable() {
                     console.log(staffList[i].children[j].children);
                     if (staffList[i].children[j].children.length > 1) {
                         var ul = document.createElement('ul');
-                        for (var k = 0; k < staffList[i].children[j].children.length; k++) {
+                       // for (var k = 0; k < staffList[i].children[j].children.length; k++) {
                             var li = document.createElement('li');
                             li.innerHTML = staffList[i].children[j].children[k].innerHTML;
-                        }
+                       // }
                         td.appendChild(ul);
                         ul.appendChild(li);
                     } else {

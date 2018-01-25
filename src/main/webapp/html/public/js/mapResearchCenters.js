@@ -103,30 +103,3 @@ function initMapCenters() {
     infowindow.open(researchCentersMap,marqueurSaclay);
   });
 }
-/*
-var Cris;
-$( document ).ready(function() {
-
-var requestURL = 'bastriCris.json';
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
-request.onload = function() {
-Cris = request.response;
-Cris.forEach(function(cr) {
-var lib = cr['libelle'];
-var lat = cr['adressegeographique']['latitude'];
-var long = cr['adressegeographique']['longitude'];
-var dateOuv = cr['date_ouverture'];
-var adr = cr['adressegeographique']['libelle']+" "+ cr['adressegeographique']['adresse']+" "+cr['adressegeographique']['cp']+" "+cr['adressegeographique']['ville'];
-var dcr = cr['responsable'][0]['personne']['nom']+" "+ cr['responsable'][0]['personne']['prenom'];
-var ds = cr['responsable'][1]['personne']['nom']+" "+ cr['responsable'][1]['personne']['prenom'];
-var da = cr['responsable'][2]['personne']['nom']+" "+ cr['responsable'][2]['personne']['prenom'];
-var vpcp = cr['responsable'][3]['personne']['nom']+" "+ cr['responsable'][3]['personne']['prenom'];
-ajouterContenuTabCR(lib,lat,long);
-ajouterContenuCR(lib,dateOuv,adr, dcr,ds,da,vpcp);
-});
-}
-});
-*/

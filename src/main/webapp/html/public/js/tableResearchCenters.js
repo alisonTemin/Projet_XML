@@ -4,7 +4,7 @@ function fillCentresTable() {
 
     //Appel ajax
     //http:localhost:2222/centrederecherche/details
-    fetch("http://localhost:2222/rest/centrederecherche/details").then(function (reponse) {
+    fetch("http://localhost:2222/centrederecherche/details").then(function (reponse) {
         return reponse.text();
     }).then(function (text) {
         var dp = new DOMParser();
