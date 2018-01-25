@@ -19,11 +19,8 @@ public class ConversionBastriCris {
 
             Crs centres = (Crs) unmarshaller.unmarshal(new URL("http://localhost:2222/bastriCris.xml"));
 
-
             /*List<Crs.Cr> centreList = centres.getCr();
             System.out.println(centreList);
-
-
             System.out.println();
             return centreList;*/
             return centres;

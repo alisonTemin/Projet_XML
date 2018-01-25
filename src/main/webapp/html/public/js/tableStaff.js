@@ -21,9 +21,9 @@ function fillStaffTable() {
                         for (var k = 0; k < staffList[i].children[j].children.length; k++) {
                             var li = document.createElement('li');
                             li.innerHTML = staffList[i].children[j].children[k].innerHTML;
+                            ul.appendChild(li);
                         }
                         td.appendChild(ul);
-                        ul.appendChild(li);
                     } else {
                         td.innerHTML = staffList[i].children[j].innerHTML;
                     }
@@ -41,15 +41,14 @@ function fillStaffTable() {
             for (var j = 0; j < staffList[i].children.length; j++) {
                 if (j == staffList[i].children.length - 2) {
                     var td = document.createElement('td');
-                    console.log(staffList[i].children[j].children);
                     if (staffList[i].children[j].children.length > 1) {
                         var ul = document.createElement('ul');
-                       // for (var k = 0; k < staffList[i].children[j].children.length; k++) {
+                        for (var k = 0; k < staffList[i].children[j].children.length; k++) {
                             var li = document.createElement('li');
                             li.innerHTML = staffList[i].children[j].children[k].innerHTML;
-                       // }
+                            ul.appendChild(li);
+                        }
                         td.appendChild(ul);
-                        ul.appendChild(li);
                     } else {
                         td.innerHTML = staffList[i].children[j].innerHTML;
                     }
